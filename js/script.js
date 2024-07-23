@@ -1,219 +1,113 @@
-/* Armar una app web interactiva
-Tiene que simular un proceso comercial o profesional. 
-
-Declarar variables, constantes y arrays
-1 o a funciones que interactúen. 
-condicionales o ciclos necesarios. 
-Prompt, confirm y alert. 
-Por lo menos un condicional y un bucle o un while o un for. pero al menos uno en cada uno
-Procesar una información con minimo tres funciones. 
-llamar las funciones, usarlas (no olvidar)
-*/
 
 
-// EJEMPLO PARA HACER UNA CARTA GANTT
+// --- I D E A  1 ---
+// 1.- TO DO LIST QUE TIENE POR OBJETIVO SACAR EL CALCULO DE LA CANTIDAD DE DÍAS DE ESFUERZO QUE LLEVAN LAS TAREAS A REALIZAR. 
 
-/*
-let actividad = prompt("¿Que actividad quieres programar?")
+let cantidadTareas = parseInt(prompt("Cuantas tareas reaizarás?"))
 
-let dias = parseInt(prompt("¿Por cuantos días?"))
+let totalEsfuerzo = 0;
+let tareas = []
 
-let rangoInicialdia = parseInt(prompt("¿Desde que día del mes que quieres comenzar"))
+for (let i = 0; i < cantidadTareas; i++) {  
+  let objetivo = prompt("Escribe el título de la tarea")
 
-let rangoInicialmes = prompt("¿Que mes quieres comenzar?")
+  let descripcion = prompt("Escribe una breve descripción de la tarea")
 
-let rangoFinaldia = parseInt(prompt("Desde que día del mes que quieres terminar"))
+  let esfuerzo = parseInt(prompt("¿Cuanto tiempo tomará realizarla?"))
+  
+  tareas.push({ 
+    objetivo: objetivo, 
+    descripcion: descripcion, 
+    esfuerzo: esfuerzo })
+  totalEsfuerzo = totalEsfuerzo + esfuerzo
+}
 
-let rangoFinalmes = prompt("¿Que mes quieres terminar?")
-
-let diasDelaSemana = prompt("¿Que días de la semana lo harás?")
-
-let cartaGantt = actividad + dias + rangoInicialdia + rangoInicialmes + rangoFinaldia + rangoFinalmes + diasDelaSemana
-
-alert ("Mi actividad: Realizaré " + actividad + " por " + dias + " días, entre el " + rangoInicialdia + " de " + rangoInicialmes + " hasta el " + rangoFinaldia + " de " + rangoFinalmes + " trabajando los " + diasDelaSemana)*/
-
-
-// Cuando se automatice debería tirar el rango final automático dependiendo de la cantidad de días que se decida trabajar y la fecha en que se comience.. también podría agregarse los días que ese rango implican (o mejor no, para que complicarme la vida.)
-
-
-//Funionará la carta gantt con ciclo for??? 
-
-
-//Si quiero que el usuario coloque el númeo que desea multiplicar puedo usar un prompt
+alert("Tu proyecto tomará " + totalEsfuerzo + " días");
+console.log("Tu proyecto tomará " + totalEsfuerzo + " días")
+console.log(tareas)
 
 
+// 2.- LLEVAR LOS DÍAS A TRABAJAR A UN CALENDARIO.
+// Aquí podría agregar esta información en un calendario, que responda a ¿Que días trabajaré? del 1 al 7 y que se agregue al calendario donde lunes es 1 y domingo 7, pasando por todos los días. Pero no se si se aplica con arrays o no. 
 
-//EJEMPLO DE TOO DO LIST
+//let diasTrabajados = parseInt(prompt("¿Que días trabajaré? Ingrese 1: Lunes, 2: Martes, 3: Miércoles, 4: Jueves, 5: Viernes, 6: Sábado y 7: Domingo "))
 
-/*let objetivo = prompt("Escribe tu actividad")
-
-let dia = prompt("Escribe el día de la semana que lo realizarás")
-
-let ToDolist = objetivo + dia
-
-console.log (objetivo + " el día " + dia) */
+// no supe como hacerlo, lo pongo porque puede ser algo que haga a futuro (o no).
 
 
-// Ejemplo de ojetivos logrados a la semana con condicionales. 
+// 3.- VENDER EL PRODUCTO
+// En el html se colocarían imágenes de la presentación del "to do list" y el calendario. 
 
-/*let objetivoSemanal = parseInt(prompt("Cuantos días trabajaste?"))
+let respuestaCalendario = prompt("¿Quieres un calendario sí o no?")
+if (respuestaCalendario === "sí" || respuestaCalendario === "si" || respuestaCalendario === "Si" || respuestaCalendario === "Sí" || respuestaCalendario === "SI" ) {
+    precioCalendario = 100;
+}
+let cantidadCalendarios = parseInt(prompt("¿Cuántos calendarios quieres?"));
+let ValorTotalCalendarios = precioCalendario * cantidadCalendarios;
 
-
-    if (objetivoSemanal >= 5) {
-        alert ("lograste tu objetivo semanal")
-    }  else if (objetivoSemanal == 0) {
-        alert ("Date otra oportunidad")
-    } else { 
-        alert ("Sigue mejorando")
-    }*/
-
-// Con switch y while
+alert("El valor total es: " + ValorTotalCalendarios + " pesos.")
+console.log("El valor total es: " + ValorTotalCalendarios + " pesos.")
 
 
-/*let continuar = true
-
-while(continuar) {
-
-    let objetivoSemanal = parseInt(prompt("Ingrese 1 si trabajaste 5 o mas días, 2 si trabajaste 0 días y 3 si trabajaste entre 1 y 4 días"))
-
-    switch(objetivoSemanal) {
-        case 1: 
-            alert("lograste tu objetivo semanal")
-            break
-        case 2:
-            alert("Date otra oportunidad")
-            break
-        case 3: 
-            alert("Sigue mejorando")
-            break
-        default:
-            alert("Entrada inválida")
-    }
-   
-    let confirmacion = prompt("Desea hacer otra consulta? si/no")
-    if(confirmacion == "no"){
-        continuar=false
-        alert("Buena práctica de orgaización, vuelve pronto!") }
-}*/
-
-/*let dias = console.log("Cuantos días trabajaste?")
-
-let objetivoSemanal = parseInt(prompt("Ingrese 1 si trabajaste 5 o mas días, 2 si trabajaste 0 días y 3 si trabajaste entre 1 y 4 días"))
-
-switch (menu) {
-    case 1: 
-        alert("lograste tu objetivo semanal")
-        break
-    case 2:
-        alert("Date otra oportunidad")
-        break
-    case 3: 
-        alert("Sigue mejorando")
-        break
-    default:
-        alert("Buena práctica de organización")
+let respuestaTareas = prompt("¿Quieres comprar tareas sí o no?")
+if (respuestaCalendario === "sí" || respuestaCalendario === "si" || respuestaCalendario === "Si" || respuestaCalendario === "Sí" || respuestaCalendario === "SI" ) {
 
 }
-let confirmacion = prompt("Desea hacer otra consulta? si/no")
-if(confirmacion == "no"){
-    continuar=false
-    alert("gracias!") }*/
+function multiplicar () {
+    let Cantidadtareas = parseInt(prompt("¿Cuantas análisis de tareas quieres comprar?"))
+    let ValorTarea = 50
+   
 
-    
+    let ValorTotalTarea = Cantidadtareas * ValorTarea
 
+    return ValorTotalTarea
+}
 
-//Después hay que asociar cada actividad a un día diferente ooooo puedo hacer un to do list sin días de la semana, solo que haga el de el día, para eso es solo una interfaz, para el otro hay que hacer una interfaz de planner de l a d. 
+let precio = multiplicar()
 
+alert("El valor es de " + precio + " pesos.")
+console.log("El valor es de " + precio + " pesos.")
 
-// EJEMPLO DE REGISTRO DE HÁBITOS. 
+// No logro sumar los dos y tampoco supe como hacer para que el "no" sea "false".
+/*
+let CostoTotal = ValorTotalCalendarios + precio
+Alert(CostoTotal)
+console.log(CostoTotal)
+*/
 
+// -- I D E A  2 --
 
-// ARRAYS
+// 4.-  AGREGAR GRÁFICO DE PORCENTAJE DE HÁBITOS y tareas logradas en base a la información de arriba 
 
-/*const dia1 = 1 
-const dia2 = 2 
-const dia3 = 3 
-const dia4 = 4 
-const dia5 = 5 
-const dia6 = 6 
-const dia7 = 7
-const dia8 = 8 
-const dia9 = 9 
-const dia10 = 10 
-const dia11 = 11 
-const dia12 = 12 
-const dia13 = 13 
-const dia14 = 14 
-const dia15 = 15 
-const dia16 = 16 
-const dia17 = 17
-const dia18 = 18 
-const dia19 = 19 
-const dia20 = 20 
-const dia21 = 21 
-const dia22 = 22 
-const dia23 = 23 
-const dia24 = 24 
-const dia25 = 25 
-const dia26 = 26 
-const dia27 = 27
-const dia28 = 28 
-const dia29 = 29 
-const dia30 = 30 
-const dia31 = 31 
+let MiMeta = parseInt(prompt("¿Cuantos días te propondrás como hábito por cada semana?"))
+let Objlogrado = parseInt(prompt("¿Cuandos días lo lograste realmente?"))
 
-const dias = [1,2,3,4,5,6,7,8,9,10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
-dias.push(40)
-console.log(dias)
+let resultado = 100 * Objlogrado / MiMeta
+
+console.log("Lograste " + resultado + "% de tus hábitos")
 
 
-const mes1 = "Enero"
-const mes2 = "Febrero"
-const mes3 = "Marzo"
-const mes4 = "Abril"
-const mes5 = "Mayo"
-const mes6 = "Junio"
-const mes7 = "Julio"
-const mes8 = "Agosto"
-const mes9 = "Septiembre"
-const mes10 = "Octubre"
-const mes11 = "Noviembre"
-const mes12 = "Diciembre"
 
-const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-console.log(meses)
-
-const diaSemana1 = "lunes"
-const diaSemana2 = "martes"
-const diaSemana3 = "miercoles"
-const diaSemana4 = "jueves"
-const diaSemana5 = "viernes"
-const diaSemana6 = "sabado"
-const diaSemana7 = "domingo"
-
-const semana = ["lunes", "martes", "miercoles", "jueves", "virnes", "sabado", "domingo"]
-console.log(semana)
-
-const cantidadSemana1 = "Semana 1"
-const cantidadSemana2 = "Semana 2"
-const cantidadSemana3 = "Semana 3"
-const cantidadSemana4 = "Semana 4"
-
-const cantidadSemana = ["Semana 1", "Semana 2", "Semana 3", "Semana 4"]
-console.log(cantidadSemana)*/
-
-// CONTACTO EJEMPLO. 
-
-let nombre = prompt("Nombre")
-let correo = prompt("Correo")
-let telefono = parseInt(prompt("teléfono"))
-let mensaje = prompt("Escribe un mensaje")
-let confirmar = confirm("¿Desea enviar el formulario?")
-
-let contacto = nombre + correo + telefono + mensaje + confirmar
-
-alert ("Nombre: " + nombre + " Correo: " + correo + " Teléfono: " + telefono + " Mensaje: " + mensaje + "." + confirmar)
+// 5.-  Ideas para generar motivación en la página web si se usa de forma virtual.. eventualmente una app de registro de hábitos.. 
 
 
-//PRESTAR SERVICIOS:
+let miObjetivo = parseInt(prompt("¿Cuál era tu objetivo en días?"))
+
+let logro = parseInt(prompt("¿Cuantos días trabajaste?"))
+
+if (logro === miObjetivo) { 
+    alert("lograste tu objetivo semanal, ¡Muy bien!")
+} else if (logro > miObjetivo) {
+    alert("Wooow! Superaste tus propios logros!") 
+} else if (logro < miObjetivo) {
+    alert("Sigue intentando, ¡tu puedes!")
+ } else if (logro == 0) {
+    alert("Puede que no haya sido tu semana, pero ¡Vamos! intentémoslo la próxima.")
+ } else { 
+        alert("Error")
+    }
+
+console.log("Lograste trabajar " + logro + " de " + miObjetivo + " días.")
+
+
 
