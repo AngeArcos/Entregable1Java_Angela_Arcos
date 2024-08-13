@@ -10,9 +10,69 @@
     <!--Uso de letra monserrat-->
     <title>Document</title>
 </head>
-<body>
-    <h1>hola!</h1>
-    <p>Entrega 1, hasta arrays (clase 4).</p>
-    
+<body class="color-fondo">
+    <main>
+        <nav>
+            <section class="contenedor__flex__menu">
+                <img src="./assets/pngwing.com.png" alt="Logo del menú">
+            </section> 
+        </nav>
+    </main>
+    <aside>
+        <section class="container">
+            <article class="row">
+                <div class="espacios">
+                    <h1>Título</h1>
+                </div>
+                <div>
+                    <input type="text" placeholder="Ingresa un título" id="titulo" />
+                </div>
+            </article>
+            <article class="row">
+                <div>
+                    <h1>Descripción</h1>
+                </div>
+                <div>
+                    <textarea placeholder="Ingresa una descripción" id="descripcion"></textarea>
+                </div>
+            </article>
+            <article class="row">
+                <div>
+                    <h1>Días para llevarlo a cabo</h1>
+                </div>
+                <div>
+                    <input type="number" value="1" min="1" id="dias"/>
+                </div>
+            </article>
+            <article>
+                <button class="button" id="boton-guardar">Guardar</button>
+            </article>
+        </section>
+        <section>
+            <table class="tabla">
+                <thead>
+                    <th class="encabezado-tabla">
+                    </th>
+                    <th class="encabezado-tabla">
+                        Título de la actividad
+                    </th>
+                    <th class="encabezado-tabla">
+                        Desripción
+                    </th>
+                    <th class="encabezado-tabla">
+                        Esfuerzo
+                    </th>
+                </thead>
+                <tbody class="total-esfuerzo" id="tabla-actividades">
+                    <td>
+                        <tr>Total Esfuerzo:<span id="total-esfuerzo"></span></td>
+                    </td>
+                </tbody>
+            </table>
+        </section>
+    </aside>
+    <footer>
+
+    </footer>
 </body>
 </html>

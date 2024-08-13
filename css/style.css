@@ -1,0 +1,45 @@
+.color-fondo {
+    background-color: whitesmoke;
+}
+.contenedor__flex__menu {
+    display: flex;    
+    justify-content: center; 
+    align-items: center;    
+    margin-bottom: 20px;
+    background-color: rgb(204, 162, 243);
+}
+.contenedor__flex__menu img {
+    width: 100px;
+  }
+.container {
+    background-color: rgb(199 191 199);
+    width: fit-content;
+    margin: 0 auto 20px auto;
+    border: 5px solid rgb(84, 50, 77);
+  }
+.row {
+    margin-left: 50px;
+ } 
+
+ .button {
+    margin-left: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+ }
+
+ .espacios {
+    display: flex;
+    justify-content: left;
+    
+ }
+.tabla {
+    width: 100%;
+    background-color: rgb(204, 162, 243);
+}
+ .encabezado-tabla {
+
+    background-color: #b479f0;
+ }
+
+
