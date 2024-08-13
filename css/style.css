@@ -6,16 +6,27 @@
     justify-content: center; 
     align-items: center;    
     margin-bottom: 20px;
-    background-color: rgb(204, 162, 243);
+    background-color: #cca2f3;
 }
+
+.contenedor__flex__footer {
+    display: flex;    
+    justify-content: center; 
+    align-items: center;    
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #cca2f3;
+}
+
 .contenedor__flex__menu img {
     width: 100px;
   }
 .container {
-    background-color: rgb(199 191 199);
+    background-color: #c7bfc7;
     width: fit-content;
     margin: 0 auto 20px auto;
-    border: 5px solid rgb(84, 50, 77);
+    border: 5px solid #54324d;
   }
 .row {
     margin-left: 50px;
@@ -35,11 +46,10 @@
  }
 .tabla {
     width: 100%;
-    background-color: rgb(204, 162, 243);
+    background-color: #c7bfc7;
 }
  .encabezado-tabla {
-
-    background-color: #b479f0;
+    background-color: #714b69;
  }
 
 
