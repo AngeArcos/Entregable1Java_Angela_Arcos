@@ -1,0 +1,12 @@
+[
+    {
+        "titulo": "Tarea 1",
+        "descripcion": "Esta tarea viene del json",
+        "dias": 2
+    },
+    {
+        "titulo": "Tarea 2",
+        "descripcion": "Esta tarea también viene del json",
+        "dias": 4
+    }
+]
